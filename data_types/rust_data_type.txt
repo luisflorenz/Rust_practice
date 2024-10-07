@@ -1,0 +1,113 @@
+Every value in Rust is of a certain type. This type is known at compile time, making Rust a statically typed language. The Rust compiler can often determine the variable type from how it is used. This ability allows the programmer to omit the type in variable declarations, making the source code more concise.
+
+Rust Data Types are divided into two major types: Scalar Types and Coumpound Types.
+
+A Scalar Type represents a single value. Rust has four primary scalar types:
+
+* integers
+* floating-point numbers
+* Booleans
+* characters
+
+Integers
+☝️ An integer represents a "whole" number. Integers are numbers that do not have a fractional part. They often come in two flavors: signed and unsigned.
+
+Signed
+A signed integer can represent negative numbers.
+
+Unsigned
+An unsigned integer can represent only non-negative numbers.
+
+
+Length	Signed	Unsigned
+8-bit	i8       u8
+16-bit	i16      u16
+32-bit	i32      u32
+64-bit	i64      u64
+128-bit	i128     u128
+arch*	isize    usize
+
+Integer values can be defined in your program as follows:
+
+Number literals	Example
+Decimal	98_222
+Hex	    0xff
+Octal	0o77
+Binary	0b1111_0000
+Byte (
+u8
+ only)	b'A'
+
+ Floats
+The floating point is used to represent numbers with fractional parts.
+
+Rust provides the following floating point types:
+
+Length	Signed
+32-bit	f32
+64-bit	f64
+
+Floating-point numbers are stored in memory according to the IEEE-754 standard.
+
+Their values can be defined in the program as follows:
+
+Float literals	Example
+Whole	    2022f32
+              or 
+            2022f64
+Dot*	    6.
+Full	    17.0
+Scientific	2.002E1
+
+Dot*. This notation can not be suffixed by the type because the compiler would interpret it as a f
+
+Boolean
+☝️ The boolean is a type named bool which only has two values: true and false. While bool only requires 1 bit of memory to store, they take up one byte in size.
+
+Character
+Rust has a type called 
+char
+
+which can store a unicode scalar value. This type lends itself well for storing a single character, but not for storing a piece of text because it is 4 bytes in size. To store text, use the 
+str
+
+type, which represents a UTF-8 encoded string stored as a sequence of bytes. You will revisit the 
+str
+
+type in full once you discuss slices.
+
+Compound Types
+Compound types are types that are composed of one or more other types. Rust's compound types can be subdivided into anonymous and named compound types.
+
+📌 There are two anonymous compound types:
+
+* Arrays
+* Tuples
+
+Arrays
+An array represents an ordered sequence of array items, where each array item is of the same type. The array type is written as 
+[T; N]
+where 
+T
+ is the type and 
+N
+ is the number of array items.
+
+Slices
+An array is of a known length. Often, however, you would like to be able to write code that can handle arrays of any length. This is where slices come in. The slice type is written as [T] where T is the type. Notice that the length is not specified. 👉 The slice is known as an unsized type or a dynamically sized type (DST). It is not possible to store an unsized type on the stack.
+
+Tuples
+👉 A tuple represents an ordered sequence of tuple items, where each tuple item may be of a different type. The tuple type is written as (T1, T2, ...) where T1 T2 and are the types of the tuple items.
+
+Structs
+While tuple structs could be used to represent complex objects, giving a name to each tuple field is often useful.
+
+Enumerations
+In programming, you often need to represent a fixed set of possible values known at compile time.
+
+Tagged Unions
+Attaching data to enum variants can be useful when you want to put different data types into a single collection, and the different types of data are known at compile time. This is sometimes referred to as tagged unions in other programming languages.
+
+
+
+

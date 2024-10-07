@@ -1,0 +1,45 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'Pattern_Matching'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=Pattern_Matching",
+                    "--package=Pattern_Matching"
+                ],
+                "filter": {
+                    "name": "Pattern_Matching",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'Pattern_Matching'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=Pattern_Matching",
+                    "--package=Pattern_Matching"
+                ],
+                "filter": {
+                    "name": "Pattern_Matching",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}

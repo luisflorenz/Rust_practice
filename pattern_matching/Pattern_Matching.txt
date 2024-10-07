@@ -1,0 +1,24 @@
+Pattern Matching
+
+Pattern matching allows you to deconstruct values of complex types into their parts. The pattern does not have to include all possibilities when conditionally matching. This is called a refutable pattern. At other times, for example, when declaring variables through 
+let
+, the pattern must be irrefutable, meaning that the pattern can match any possible value of the type you are matching against.
+
+:point_right: The examples below will clarify how pattern matching works and the difference between irrefutable and refutable patterns.
+
+let
+The 
+let
+ statement is used to introduce variables into the programs. It may have seemed like you could only introduce one variable simultaneously. The 
+let
+ statement is quite powerful. It specifies not just a new name, but a so-called irrefutable pattern.
+
+The structure of the 
+let
+ statement is as follows:
+
+
+let <pattern>: <type> = <expression>;
+
+The: <type> bit may be omitted if the compiler can infer the type of the variable. The = <expression> may be omitted if the programmer wishes to initialize the variable later.
+

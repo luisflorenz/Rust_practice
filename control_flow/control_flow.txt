@@ -1,0 +1,69 @@
+Control Flow
+👉 To add behavior to programs, you need the ability to run code conditionally and repeatedly. Below, you’ll find out the language constructs available in Rust.
+
+Conditional execution
+You can use an 
+if
+
+Unlike in most programming languages, the 
+if
+ statement does not require parenthesis around the condition. The 
+if
+ statement does require curly braces around the body.
+
+☝️ You can also do something in case of the condition in an 
+if
+ statement is not met through 
+else
+
+It is sometimes helpful to check multiple conditions in sequence, which can be done using 
+else if
+
+🤓 The condition expressions must evaluate to a value of type 
+bool
+
+Looping
+There are three kinds of loops in Rust:
+The simplest loop is 
+loop
+
+👉 You can break out of a 
+loop
+ with the 
+break
+ statement or by returning from the current function through 
+return
+
+You could also write the above loop with 
+while
+The 
+while
+
+You could also write the above loop with 
+for
+
+The 
+for
+ loop runs until something called an iterator cannot yield more values. Most iterators can only produce a finite number of items, but some do not end until you hit a limit of the actual machine it is running on.
+
+ The 
+1..=10
+ is a range expression. It creates a range from the number 1 up to, and including, 10. The range 
+a..=b
+ creates an inclusive range. An exclusive range can be created using 
+a..b
+
+The code that reads 
+.rev()
+ calls a function on the range that produces a reversed iterator. That means you visit all the items from the end to the start. The 
+rev
+ function is implemented for any type that implements the 
+DoubleEndedIterator
+
+The 
+continue
+ statement just starts the next iteration.
+
+There are many ways to create, modify, merge and split iterators defined in the standard library. Even more powerful but non-standard functionality is provided by a third-party Rust library called itertools. For now, however, you will not dwell on iterators and 
+continue
+ the other important topics you should know about.
