@@ -8,3 +8,4 @@ let mut x = 2;
 x = 3;
 }
 
+// This is a mut variable exmaple.

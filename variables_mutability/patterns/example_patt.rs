@@ -23,3 +23,5 @@ let Person {
     name, age, ..
 } = p;
 }
+
+// tHis is a patterns variable example.
